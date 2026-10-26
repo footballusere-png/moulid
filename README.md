@@ -38,8 +38,8 @@ Then open `http://localhost:8000`. Do not open `index.html` as a `file://` URL: 
 The repository root is the static asset directory. There is no framework build step. `.assetsignore` keeps Git metadata, Wrangler config, project documentation, and WebDev-only route metadata out of the public asset bundle.
 
 1. Install Node.js/npm if they are not already available, and from the repository root run `npx wrangler login` to authenticate with Cloudflare.
-2. Deploy the root website files with `npx wrangler deploy --assets .`; Wrangler applies `.assetsignore` while collecting assets.
-3. The equivalent configuration-based command is `npx wrangler deploy`; `wrangler.jsonc` already points `assets.directory` at `.` and sets the Worker name to `alhamdulillah-moulid-reader`.
+2. Run `npx wrangler deploy`. The committed `wrangler.jsonc` already sets `assets.directory` to `.`, so Cloudflare can deploy the repository root without an `--assets` flag.
+3. If overriding the assets path directly from a terminal, use `npx wrangler deploy --assets .`. The `--assets` option requires a directory argument; the bare command `npx wrangler deploy --assets` fails with “Not enough arguments following: assets.”
 4. After deployment, use the `workers.dev` address shown by Cloudflare, or configure a domain you already own. No domain is invented in this repository.
 
 Cloudflare's current documentation states that requests served as static assets are free and unlimited and that storing static assets has no additional charge. This project uses static assets only; adding paid products, custom domains, or Worker code is not part of this setup. Account and platform limits still apply.
@@ -48,9 +48,13 @@ Cloudflare's current documentation states that requests served as static assets 
 
 1. In the Cloudflare dashboard, open **Workers & Pages** and choose **Create application**.
 2. Choose the GitHub option, authorize Cloudflare when prompted, and select `footballusere-png/moulid` with production branch `main`.
-3. Keep the project root at the repository root. Leave the build command empty because the project has no build step. Set the deploy command to `npx wrangler deploy` (or `npx wrangler deploy --assets .`).
+3. Keep the project root at the repository root. Leave the build command empty because the project has no build step. Set the deploy command exactly to `npx wrangler deploy`; the committed `wrangler.jsonc` supplies the assets directory.
 4. Use the Worker name `alhamdulillah-moulid-reader` so it matches `wrangler.jsonc`, then save and deploy. If the Worker already exists, open it and choose **Settings → Builds → Connect** instead.
 5. Check the build result in Cloudflare before sharing the assigned public address.
+
+### Troubleshoot “Not enough arguments following: assets”
+
+If a Cloudflare build log shows `npx wrangler deploy --assets` with nothing after `--assets`, edit the Worker’s Deploy command under **Settings → Builds** and set it to `npx wrangler deploy`. This repository already declares `"assets": { "directory": "." }` in `wrangler.jsonc`. Only use `--assets` when it is followed by a directory, for example `--assets .`.
 
 Cloudflare automatically builds and deploys future commits pushed to the connected production branch. Its dashboard labels can change; if they do, consult the official [Workers Builds guide](https://developers.cloudflare.com/workers/ci-cd/builds/) and [build configuration guide](https://developers.cloudflare.com/workers/ci-cd/builds/configuration/).
 
