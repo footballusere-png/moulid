@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">ALHAMDULILLAH — Manqoos Moulid Online Reader</title>
+  <desc id="desc">A premium emerald and gold Islamic reading room with the Arabic heading الحمد لله رب العالمين.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123b2e"/>
+      <stop offset="0.55" stop-color="#071b17"/>
+      <stop offset="1" stop-color="#091f19"/>
+    </linearGradient>
+    <pattern id="geometry" width="72" height="72" patternUnits="userSpaceOnUse">
+      <path d="M36 2 43 20 62 10 52 29 70 36 52 43 62 62 43 52 36 70 29 52 10 62 20 43 2 36 20 29 10 10 29 20Z" fill="none" stroke="#d9ba6b" stroke-opacity=".18" stroke-width="1"/>
+      <path d="M36 17 42 30 55 24 49 36 55 48 42 42 36 55 30 42 17 48 23 36 17 24 30 30Z" fill="none" stroke="#d9ba6b" stroke-opacity=".16" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a98d4d"/>
+      <stop offset=".5" stop-color="#f0d58e"/>
+      <stop offset="1" stop-color="#a98d4d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#geometry)" opacity=".48"/>
+  <rect x="42" y="42" width="1116" height="546" rx="28" fill="none" stroke="#d9ba6b" stroke-opacity=".44" stroke-width="2"/>
+  <rect x="56" y="56" width="1088" height="518" rx="20" fill="none" stroke="#d9ba6b" stroke-opacity=".17"/>
+  <path d="M255 160H465M735 160H945" stroke="url(#gold)" stroke-width="2"/>
+  <path d="M600 148 612 160 600 172 588 160Z" fill="#d9ba6b"/>
+  <text x="600" y="250" fill="#f0d58e" font-family="Georgia, 'Times New Roman', serif" font-size="34" text-anchor="middle" letter-spacing="9">﷽</text>
+  <text x="600" y="326" fill="#f8e9bf" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="600" text-anchor="middle" letter-spacing="8">ALHAMDULILLAH</text>
+  <text x="600" y="374" fill="#d9ba6b" font-family="'Noto Naskh Arabic', 'Times New Roman', serif" font-size="32" text-anchor="middle" direction="rtl">الحمد لله رب العالمين</text>
+  <path d="M398 411H802" stroke="url(#gold)" stroke-width="1.5"/>
+  <text x="600" y="473" fill="#f8e9bf" font-family="Georgia, 'Times New Roman', serif" font-size="31" text-anchor="middle">Manqoos Moulid Online Reader</text>
+  <text x="600" y="519" fill="#c9ba94" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" letter-spacing="2">A QUIET SPACE FOR READING</text>
+</svg>

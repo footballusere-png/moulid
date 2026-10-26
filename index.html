@@ -1,67 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#071b17">
-<title>Alhamdulillah | Manqoos Moulid</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;background:#071b17;color:#f8e9bf;font-family:Arial,sans-serif}
-header{text-align:center;padding:28px 12px;background:linear-gradient(145deg,#174536,#071b17);border-bottom:1px solid #b99a52}
-.arabic{font-size:37px;color:#e9cc83}
-h1{font-size:25px;letter-spacing:2px;margin:12px 0 5px}
-.sub{font-size:14px;color:#c8bb99}
-main{max-width:1050px;margin:18px auto;padding:0 12px}
-.card{background:#102b24;border:1px solid #8c7542;border-radius:18px;overflow:hidden;box-shadow:0 15px 40px #0006}
-.heading{text-align:center;padding:20px 12px}
-.heading h2{margin:0 0 8px;font-size:23px}
-.heading p{margin:0;color:#c9ba94;font-size:13px}
-.toolbar{display:flex;justify-content:center;gap:10px;padding:12px;background:#17392e}
-button{border:0;background:#d9ba6b;color:#172b22;border-radius:10px;padding:11px 19px;font-weight:bold;cursor:pointer}
-.reader{height:78vh;min-height:420px;background:#fff}
-iframe{width:100%;height:100%;border:0}
-footer{text-align:center;color:#b9a977;font-size:13px;padding:25px;line-height:2}
-footer strong{color:#e9cc83}
-.light{background:#f3eddf;color:#20372c}
-.light header{background:#e6dcc2;color:#20372c}
-.light .card{background:#fff9ec}
-.light .toolbar{background:#e5dbc4}
-.light .heading p{color:#675d49}
-@media(max-width:600px){.reader{height:76vh}h1{font-size:22px}}
-</style>
-</head>
-<body>
-<header>
-<div class="arabic">﷽</div>
-<h1>ALHAMDULILLAH</h1>
-<div class="sub">الحمد لله رب العالمين</div>
-</header>
-<main>
-<section class="card">
-<div class="heading">
-<h2>Manqoos Moulid</h2>
-<p>Premium Online Moulid Reader</p>
-</div>
-<div class="toolbar">
-<button onclick="document.body.classList.toggle('light')">☾ Theme</button>
-<button onclick="openFull()">⛶ Fullscreen</button>
-</div>
-<div class="reader" id="reader">
-<iframe src="manqoos_moulid.pdf#toolbar=0&navpanes=0" title="Manqoos Moulid Reader"></iframe>
-</div>
-</section>
-</main>
-<footer>
-ALHAMDULILLAH © 2026<br>
-Created by <strong>Risham004</strong>
-</footer>
-<script>
-function openFull(){
-const r=document.getElementById('reader');
-if(!document.fullscreenElement){r.requestFullscreen?.()}
-else{document.exitFullscreen?.()}
-}
-</script>
-</body>
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#071b17">
+    <meta name="author" content="Risham004">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="googlebot" content="index, follow, max-image-preview:large">
+    <meta name="description" content="Read Manqoos Moulid online at Alhamdulillah. A beautiful, mobile-friendly Islamic Moulid reader created by Risham004.">
+    <meta name="keywords" content="Manqoos Moulid, Manqoos Moulid PDF, Manqoos Moulid Online, Manqoos Maulid, Mankus Moulid, Alhamdulillah, Islamic Moulid Reader, Risham004">
+    <title>Manqoos Moulid Online Reader | Alhamdulillah</title>
+
+    <!-- Replace YOUR_DEPLOYED_DOMAIN after deployment; never substitute an invented domain. -->
+    <link rel="canonical" href="https://YOUR_DEPLOYED_DOMAIN/">
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="preload" href="./styles.css" as="style">
+    <link rel="stylesheet" href="./styles.css">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Manqoos Moulid Online Reader | Alhamdulillah">
+    <meta property="og:description" content="Read Manqoos Moulid online at Alhamdulillah. A beautiful, mobile-friendly Islamic Moulid reader created by Risham004.">
+    <meta property="og:site_name" content="ALHAMDULILLAH">
+    <meta property="og:url" content="https://YOUR_DEPLOYED_DOMAIN/">
+    <meta property="og:image" content="https://YOUR_DEPLOYED_DOMAIN/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ALHAMDULILLAH — Manqoos Moulid Online Reader">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_AR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manqoos Moulid Online Reader | Alhamdulillah">
+    <meta name="twitter:description" content="Read Manqoos Moulid online at Alhamdulillah. A beautiful, mobile-friendly Islamic Moulid reader created by Risham004.">
+    <meta name="twitter:image" content="https://YOUR_DEPLOYED_DOMAIN/og-image.png">
+    <meta name="twitter:image:alt" content="ALHAMDULILLAH — Manqoos Moulid Online Reader">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ALHAMDULILLAH",
+        "url": "https://YOUR_DEPLOYED_DOMAIN/",
+        "description": "Read Manqoos Moulid online at Alhamdulillah. A beautiful, mobile-friendly Islamic Moulid reader created by Risham004.",
+        "inLanguage": ["en", "ar"],
+        "creator": {
+          "@type": "Person",
+          "name": "Risham004"
+        },
+        "about": {
+          "@type": "Book",
+          "name": "Manqoos Moulid",
+          "inLanguage": "ar"
+        }
+      }
+    </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to reader</a>
+
+    <header class="site-header">
+      <div class="header-ornament" aria-hidden="true"></div>
+      <p class="bismillah" lang="ar" dir="rtl" aria-label="Bismillah">﷽</p>
+      <p class="brand-title">ALHAMDULILLAH</p>
+      <p class="brand-arabic" lang="ar" dir="rtl">الحمد لله رب العالمين</p>
+      <div class="gold-divider" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="reader-card" id="reader-card" aria-labelledby="book-title">
+        <div class="book-heading">
+          <p class="eyebrow">A QUIET SPACE FOR READING</p>
+          <h1 id="book-title">Manqoos Moulid</h1>
+          <p class="book-subtitle">Premium Online Moulid Reader</p>
+        </div>
+
+        <div class="reader-toolbar" aria-label="Reader controls">
+          <button class="control-button" id="theme-toggle" type="button" aria-pressed="false">
+            <span class="control-icon theme-icon" aria-hidden="true">◐</span>
+            <span id="theme-toggle-text">Light theme</span>
+          </button>
+          <button class="control-button control-button-secondary" id="fullscreen-toggle" type="button" aria-pressed="false">
+            <span class="control-icon fullscreen-icon" aria-hidden="true">⛶</span>
+            <span id="fullscreen-toggle-text">Enter fullscreen</span>
+          </button>
+        </div>
+
+        <div class="reader-meta">
+          <p class="reader-status" id="reader-status" role="status" aria-live="polite" aria-atomic="true">
+            <span class="loading-mark" aria-hidden="true"></span>
+            <span id="reader-status-text">Preparing the reading pages…</span>
+          </p>
+          <span class="page-count" id="page-count" hidden></span>
+        </div>
+
+        <div class="reader-scroll" id="reader-scroll" tabindex="0" aria-label="Scrollable Manqoos Moulid pages" hidden>
+          <h2 class="visually-hidden" id="reader-pages-heading">Manqoos Moulid pages</h2>
+          <div class="pdf-pages" id="pdf-pages"></div>
+        </div>
+
+        <p class="reader-error" id="reader-error" role="alert" hidden>
+          The reading pages could not be loaded. Check your connection and reload the page to try again.
+        </p>
+        <noscript>
+          <p class="reader-error">JavaScript is required to render the reading pages in this browser.</p>
+        </noscript>
+      </section>
+
+      <p class="privacy-note">The reader has no tracking scripts and does not ask for an account.</p>
+    </main>
+
+    <footer class="site-footer">
+      <p>ALHAMDULILLAH © 2026</p>
+      <p>Created by <strong>Risham004</strong></p>
+    </footer>
+  </body>
 </html>

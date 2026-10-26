@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace YOUR_DEPLOYED_DOMAIN with the real public origin after deployment.
+Sitemap: https://YOUR_DEPLOYED_DOMAIN/sitemap.xml

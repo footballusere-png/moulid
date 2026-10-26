@@ -1,0 +1,9 @@
+.git/
+.wrangler/
+node_modules/
+.assetsignore
+README.md
+TODO.md
+wrangler.jsonc
+manus-routes.json
+og-image.svg
