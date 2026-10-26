@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b17">
+<title>Alhamdulillah | Manqoos Moulid</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#071b17;color:#f8e9bf;font-family:Arial,sans-serif}
+header{text-align:center;padding:28px 12px;background:linear-gradient(145deg,#174536,#071b17);border-bottom:1px solid #b99a52}
+.arabic{font-size:37px;color:#e9cc83}
+h1{font-size:25px;letter-spacing:2px;margin:12px 0 5px}
+.sub{font-size:14px;color:#c8bb99}
+main{max-width:1050px;margin:18px auto;padding:0 12px}
+.card{background:#102b24;border:1px solid #8c7542;border-radius:18px;overflow:hidden;box-shadow:0 15px 40px #0006}
+.heading{text-align:center;padding:20px 12px}
+.heading h2{margin:0 0 8px;font-size:23px}
+.heading p{margin:0;color:#c9ba94;font-size:13px}
+.toolbar{display:flex;justify-content:center;gap:10px;padding:12px;background:#17392e}
+button{border:0;background:#d9ba6b;color:#172b22;border-radius:10px;padding:11px 19px;font-weight:bold;cursor:pointer}
+.reader{height:78vh;min-height:420px;background:#fff}
+iframe{width:100%;height:100%;border:0}
+footer{text-align:center;color:#b9a977;font-size:13px;padding:25px;line-height:2}
+footer strong{color:#e9cc83}
+.light{background:#f3eddf;color:#20372c}
+.light header{background:#e6dcc2;color:#20372c}
+.light .card{background:#fff9ec}
+.light .toolbar{background:#e5dbc4}
+.light .heading p{color:#675d49}
+@media(max-width:600px){.reader{height:76vh}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<header>
+<div class="arabic">﷽</div>
+<h1>ALHAMDULILLAH</h1>
+<div class="sub">الحمد لله رب العالمين</div>
+</header>
+<main>
+<section class="card">
+<div class="heading">
+<h2>Manqoos Moulid</h2>
+<p>Premium Online Moulid Reader</p>
+</div>
+<div class="toolbar">
+<button onclick="document.body.classList.toggle('light')">☾ Theme</button>
+<button onclick="openFull()">⛶ Fullscreen</button>
+</div>
+<div class="reader" id="reader">
+<iframe src="manqoos_moulid.pdf#toolbar=0&navpanes=0" title="Manqoos Moulid Reader"></iframe>
+</div>
+</section>
+</main>
+<footer>
+ALHAMDULILLAH © 2026<br>
+Created by <strong>Risham004</strong>
+</footer>
+<script>
+function openFull(){
+const r=document.getElementById('reader');
+if(!document.fullscreenElement){r.requestFullscreen?.()}
+else{document.exitFullscreen?.()}
+}
+</script>
+</body>
+</html>
